@@ -6,15 +6,14 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-
 public class Deck {
 //	Deck deck = new Deck();
 	private List<Card> deck = new ArrayList<>();
-	//this is supposed to be a constructor to initialize the cards 
-	
-	public Deck () {
+	// this is supposed to be a constructor to initialize the cards
+
+	public Deck() {
 		for (Suit suit : Suit.values()) {
-			
+
 			for (Rank rank : Rank.values()) {
 				Card card = new Card(suit, rank);
 				deck.add(card);
@@ -31,24 +30,34 @@ public class Deck {
 	}
 
 	public int checkDeckSize() {
-		//check deck size
-		//return number of cards 
+		// check deck size
+		// return number of cards
 		return deck.size();
 	}
-	
+
 	public Card dealCard() {
-		//removes one card from the deck 
+		// removes one card from the deck
 		return deck.remove(0);
 	}
-	
+
 	public void shuffleDeck() {
-		//shuffle the deck
+		// shuffle the deck
+		System.out.println("Shuffling the deck!");
+		pressEnter();
 		Collections.shuffle(deck);
-		
+
+	}
+	
+	public void pressEnter() {
+		System.out.println("Press enter to continue...");
+		try {
+			System.in.read();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
-
 
 //We will be simulating a deck of cards.
 //
