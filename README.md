@@ -16,7 +16,10 @@ Where to go from here:
 on the brain, not Blackjack. Haven't lost too much 
 time as mechanically I'm still stuck at passing cards to a hand.
 
+12:41 AM Sun // GOT IT!!! Figured out how to pass the value to the individual hands! Also 
+figured out how to retrieve their individual values so I can count them! 
 
- - Need to keep a running count of the card deck 
+
+ - Need to keep a running count of the card deck (why? not for blackjack 
  - Want to put a random "waitress shows up w a drink!"
  - Should game end on 21 by player? 

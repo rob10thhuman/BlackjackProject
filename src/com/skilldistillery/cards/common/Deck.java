@@ -42,6 +42,7 @@ public class Deck {
 
 	public void shuffleDeck() {
 		// shuffle the deck
+		System.out.println("");
 		System.out.println("Shuffling the deck!");
 		System.out.println("(no one likes a cheat!)");
 		pressEnter();
