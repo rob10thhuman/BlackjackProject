@@ -54,6 +54,11 @@ public class Card {
 	@Override
 	public String toString() {
 		return "Card [suit=" + suit + ", rank=" + rank + "]";
+	}
+
+	public void add(Card card) {
+		// TODO Auto-generated method stub
+		
 	} 
 	
 	

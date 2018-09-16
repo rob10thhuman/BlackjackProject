@@ -12,6 +12,8 @@ public class BlackJackApp {
 	}
 
 	public void run() {
+		BlackJackApp player = new BlackJackApp();
+		Hand hand = new Hand(); 
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Do you want to play a game? (Y/N) >> ");
 		String choice = kb.next();
@@ -23,21 +25,45 @@ public class BlackJackApp {
 		System.out.println("How many cards do you want? >>");
 		int numberOfCards = kb.nextInt();
 		// handle case of non integer or greater than 52 -- print an error message
-		while (numberOfCards >= 1 && numberOfCards <= 52) {
+		if (numberOfCards >= 1 && numberOfCards <= 5) {
 
 			// should have another method for the mechanics of each game itself?
 
 
 			System.out.println("");
 
+//			System.out.print(deck.checkDeckSize());
+
+			if (numberOfCards == 1) {
+				hand.add(deck.dealCard());
+			} else if (numberOfCards == 2){
+				hand.add(deck.dealCard());
+				hand.add(deck.dealCard());
+			} else if (numberOfCards == 3) {
+				hand.add(deck.dealCard());
+				hand.add(deck.dealCard());
+				hand.add(deck.dealCard());
+			} else if (numberOfCards == 4) {
+				hand.add(deck.dealCard());
+				hand.add(deck.dealCard());
+				hand.add(deck.dealCard());
+				hand.add(deck.dealCard());
+ 			} else if (numberOfCards == 5) {
+ 				hand.add(deck.dealCard());
+ 				hand.add(deck.dealCard());
+ 				hand.add(deck.dealCard());
+ 				hand.add(deck.dealCard());
+ 				hand.add(deck.dealCard());
+ 			}
+
 			System.out.print(deck.checkDeckSize());
 
-//			deck.dealCard();
-
 			System.out.println("");
-
 //			System.out.print(deck.getDeck());
 
+		} else {
+			System.out.println("You can't draw that many cards! ");
+			
 		}
 
 		} else {
