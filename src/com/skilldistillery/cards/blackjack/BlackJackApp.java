@@ -66,8 +66,9 @@ public class BlackJackApp {
 
 //		int playerScore = Player.playerHand.get(0).getRank().getValue() + Player.playerHand.get(1).getRank().getValue();
 		int playerScore = Player.playerScore(); 
-		int dealerScore = Dealer.dealerHand.get(0).getRank().getValue() + Dealer.dealerHand.get(1).getRank().getValue();
-
+//		int dealerScore = Dealer.dealerHand.get(0).getRank().getValue() + Dealer.dealerHand.get(1).getRank().getValue();
+		int dealerScore = Dealer.dealerScore(); 
+		
 		System.out.println("Player has a hand value of " + playerScore);
 		System.out.println("");
 
@@ -105,7 +106,9 @@ public class BlackJackApp {
 
 			System.out.println("Player is dealt a " + Player.playerHand.get(2));
 			
-			System.out.println(Player.playerHand.size());
+			System.out.println("");
+			
+			System.out.println("Player has " + Player.playerHand.size() + " cards.");
 
 			Deck.pressEnter();
 			
@@ -120,6 +123,7 @@ public class BlackJackApp {
 			
 //			Player.playerScore(); 
 
+			System.out.println("");
 			System.out.println("Player has a hand value of " + Player.playerScore());
 			System.out.println("");
 
@@ -148,8 +152,8 @@ public class BlackJackApp {
 		
 		if (dealerScore > 17) {
 			Dealer.add(deck.dealCard());
-			dealerScore = Dealer.dealerHand.get(0).getRank().getValue() + Dealer.dealerHand.get(1).getRank().getValue()
-					+ Dealer.dealerHand.get(2).getRank().getValue();
+//			dealerScore = Dealer.dealerHand.get(0).getRank().getValue() + Dealer.dealerHand.get(1).getRank().getValue()
+//					+ Dealer.dealerHand.get(2).getRank().getValue();
 
 			System.out.println("Dealer has a hand value of " + dealerScore);
 			System.out.println("");
@@ -173,8 +177,8 @@ public class BlackJackApp {
 
 			Player.add(deck.dealCard());
 			
-			playerScore = Player.playerHand.get(0).getRank().getValue() + Player.playerHand.get(1).getRank().getValue()
-					+ Player.playerHand.get(2).getRank().getValue() + Player.playerHand.get(3).getRank().getValue();
+//			playerScore = Player.playerHand.get(0).getRank().getValue() + Player.playerHand.get(1).getRank().getValue()
+//					+ Player.playerHand.get(2).getRank().getValue() + Player.playerHand.get(3).getRank().getValue();
 
 			System.out.println("Player is dealt a " + Player.playerHand.get(2));
 
@@ -206,10 +210,15 @@ public class BlackJackApp {
 			}
 		}
 
-		if (dealerScore > 17) {
+		if (dealerScore < 17) {
+			
+			System.out.println("Dealer hits!");
+			System.out.println("");
+			
 			Dealer.add(deck.dealCard());
-			dealerScore = Dealer.dealerHand.get(0).getRank().getValue() + Dealer.dealerHand.get(1).getRank().getValue();
-			System.out.println("Dealer has a hand value of " + dealerScore);
+			
+//			dealerScore = Dealer.dealerHand.get(0).getRank().getValue() + Dealer.dealerHand.get(1).getRank().getValue();
+//			System.out.println("Dealer has a hand value of " + dealerScore);
 			System.out.println("");
 
 			if (dealerScore == 21) {
@@ -220,9 +229,14 @@ public class BlackJackApp {
 				System.out.println("Dealer busts! Player wins!");
 				playAgain();
 			}
+			if (action2.equals("s") || action2.equals("S") && dealerScore > 17) {
+				//scenario here for evaluating the hands and declaring a winner if both are standing 
+			}
 		} else {
 			System.out.println("Dealer stands! ");
 		}
+		
+		
 	}
 
 	public void playAgain() {

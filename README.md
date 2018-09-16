@@ -28,6 +28,8 @@ I can consolidate the code.
 
 10:43 AM Sun // have to spend some time with my family, have some more functionality working 
 
+3:54 PM Sun // I believe I have the scoring done correctly, working on flow right now 
+
 
  - Need to keep a running count of the card deck (why? not for blackjack, just restock deck after new game?)
  - Want to put a random "waitress shows up w a drink!"

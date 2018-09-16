@@ -10,6 +10,15 @@ public class Dealer {
 		dealerHand.add(dealCard);
 	} 
 	
+	public static int dealerScore(){
+		int dealerScore = 0; 
+		
+		for (int i = 0; i < dealerHand.size(); i++) {
+		dealerScore += Dealer.dealerHand.get(i).getRank().getValue();  
+	}
+		return dealerScore; 
+}
+	
 }
 
 
