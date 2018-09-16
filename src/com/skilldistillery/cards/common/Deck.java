@@ -43,13 +43,16 @@ public class Deck {
 	public void shuffleDeck() {
 		// shuffle the deck
 		System.out.println("Shuffling the deck!");
+		System.out.println("(no one likes a cheat!)");
 		pressEnter();
 		Collections.shuffle(deck);
 
 	}
 	
-	public void pressEnter() {
+	public static void pressEnter() {
+		System.out.println("");
 		System.out.println("Press enter to continue...");
+		System.out.println("");
 		try {
 			System.in.read();
 		} catch (Exception e) {

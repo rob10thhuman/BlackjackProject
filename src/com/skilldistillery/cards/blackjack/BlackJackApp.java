@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class BlackJackApp {
 	Deck deck = new Deck();
-	
+
 	public static void main(String[] args) {
 		BlackJackApp newGame = new BlackJackApp();
 		BlackJackApp player = new BlackJackApp();
 		BlackJackApp dealer = new BlackJackApp();
-		Hand hand = new Hand(); 
+		Hand hand = new Hand();
 		newGame.run();
 	}
 
@@ -23,49 +23,37 @@ public class BlackJackApp {
 
 		deck.shuffleDeck();
 
-		System.out.println("How many cards do you want? >>");
-		int numberOfCards = kb.nextInt();
-		// handle case of non integer or greater than 52 -- print an error message
-		if (numberOfCards >= 1 && numberOfCards <= 5) {
+		System.out.println("Dealing cards!!!");
+		System.out.println("");
 
-			// should have another method for the mechanics of each game itself?
 
-			System.out.println("");
-
-			if (numberOfCards == 1) {
-				Hand.add(deck.dealCard());
-			} else if (numberOfCards == 2){
-				Hand.add(deck.dealCard());
-				Hand.add(deck.dealCard());
-			} else if (numberOfCards == 3) {
-				Hand.add(deck.dealCard());
-				Hand.add(deck.dealCard());
-				Hand.add(deck.dealCard());
-			} else if (numberOfCards == 4) {
-				Hand.add(deck.dealCard());
-				Hand.add(deck.dealCard());
-				Hand.add(deck.dealCard());
-				Hand.add(deck.dealCard());
- 			} else if (numberOfCards == 5) {
- 				Hand.add(deck.dealCard());
- 				Hand.add(deck.dealCard());
- 				Hand.add(deck.dealCard());
- 				Hand.add(deck.dealCard());
- 				Hand.add(deck.dealCard());
- 			}
-
-			System.out.print(deck.checkDeckSize());
-
-			System.out.println("");
+			System.out.print("Deck has " + deck.checkDeckSize() + "cards!");
 			
-			Hand.printHand();
+			Deck.pressEnter(); 
 
-
-		} else {
-			System.out.println("You can't draw that many cards! ");
-			//return to the deal?
+			Player.add(deck.dealCard());
 			
-		}
+			System.out.println("Player has a " + Player.playerHand);
+			
+			Dealer.add(deck.dealCard());
+			
+			System.out.println("Dealer has one face down!");
+			
+			Player.add(deck.dealCard());
+			
+			System.out.println("Player has a " + Player.playerHand);
+			
+			Dealer.add(deck.dealCard());
+			
+			System.out.println("Dealer has a " + Dealer.dealerHand);
+			
+			
+//			int handScore = 0; 
+//			for (int i = 0; i < Player.playerHand.size(); i++) {
+//				handScore+= Player.playerHand.(); 
+//			}
+			System.out.println("Player card value is " + (Player.playerHand.get(0).getRank().getValue() + Player.playerHand.get(1).getRank().getValue())); 
+
 
 		} else {
 			System.out.println("Okay, then have a great day!");
@@ -74,8 +62,4 @@ public class BlackJackApp {
 		// display them on screen
 		// display total value of all cards
 	}
-
 }
-
-//
-//Deal the cards and display them on the screen. Also display the total value of all cards.
