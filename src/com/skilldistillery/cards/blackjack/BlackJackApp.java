@@ -7,13 +7,14 @@ public class BlackJackApp {
 	Deck deck = new Deck();
 	
 	public static void main(String[] args) {
+		BlackJackApp newGame = new BlackJackApp();
+		BlackJackApp player = new BlackJackApp();
 		BlackJackApp dealer = new BlackJackApp();
-		dealer.run();
+		Hand hand = new Hand(); 
+		newGame.run();
 	}
 
 	public void run() {
-		BlackJackApp player = new BlackJackApp();
-		Hand hand = new Hand(); 
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Do you want to play a game? (Y/N) >> ");
 		String choice = kb.next();
@@ -29,40 +30,40 @@ public class BlackJackApp {
 
 			// should have another method for the mechanics of each game itself?
 
-
 			System.out.println("");
 
-//			System.out.print(deck.checkDeckSize());
-
 			if (numberOfCards == 1) {
-				hand.add(deck.dealCard());
+				Hand.add(deck.dealCard());
 			} else if (numberOfCards == 2){
-				hand.add(deck.dealCard());
-				hand.add(deck.dealCard());
+				Hand.add(deck.dealCard());
+				Hand.add(deck.dealCard());
 			} else if (numberOfCards == 3) {
-				hand.add(deck.dealCard());
-				hand.add(deck.dealCard());
-				hand.add(deck.dealCard());
+				Hand.add(deck.dealCard());
+				Hand.add(deck.dealCard());
+				Hand.add(deck.dealCard());
 			} else if (numberOfCards == 4) {
-				hand.add(deck.dealCard());
-				hand.add(deck.dealCard());
-				hand.add(deck.dealCard());
-				hand.add(deck.dealCard());
+				Hand.add(deck.dealCard());
+				Hand.add(deck.dealCard());
+				Hand.add(deck.dealCard());
+				Hand.add(deck.dealCard());
  			} else if (numberOfCards == 5) {
- 				hand.add(deck.dealCard());
- 				hand.add(deck.dealCard());
- 				hand.add(deck.dealCard());
- 				hand.add(deck.dealCard());
- 				hand.add(deck.dealCard());
+ 				Hand.add(deck.dealCard());
+ 				Hand.add(deck.dealCard());
+ 				Hand.add(deck.dealCard());
+ 				Hand.add(deck.dealCard());
+ 				Hand.add(deck.dealCard());
  			}
 
 			System.out.print(deck.checkDeckSize());
 
 			System.out.println("");
-//			System.out.print(deck.getDeck());
+			
+			Hand.printHand();
+
 
 		} else {
 			System.out.println("You can't draw that many cards! ");
+			//return to the deal?
 			
 		}
 
@@ -76,7 +77,5 @@ public class BlackJackApp {
 
 }
 
-//Write a program to ask a user how many cards they want.
 //
-//Handle the case where users enter a non-integer or a number greater than 52: print an error message.
 //Deal the cards and display them on the screen. Also display the total value of all cards.

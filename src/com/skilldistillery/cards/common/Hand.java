@@ -2,12 +2,14 @@ package com.skilldistillery.cards.common;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 import com.skilldistillery.cards.common.*;
 
 public class Hand {
-	public List<Card> hand = new ArrayList<>();
+	public static List<Card> hand = new ArrayList<>();
 	
 	public Hand() {
 		
@@ -21,9 +23,14 @@ public class Hand {
 		this.hand = hand;
 	}
 
-	public void add(Card card) {
+	public static void add(Card card) {
 		card.add(card);
 		
+	}
+	
+	public static void printHand() {
+		System.out.println(hand.size());
+		}
 	}
 
 	
@@ -47,7 +54,4 @@ public class Hand {
 //		this.rank = rank;
 //	} 
 
-
-	
-}
 
