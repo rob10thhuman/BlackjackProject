@@ -19,7 +19,14 @@ time as mechanically I'm still stuck at passing cards to a hand.
 12:41 AM Sun // GOT IT!!! Figured out how to pass the value to the individual hands! Also 
 figured out how to retrieve their individual values so I can count them! 
 
+1:23 AM Sun // have to get some sleep, working on the logic of the numbers right now. Interesting 
+issues popping up like keeping a good run count 
 
- - Need to keep a running count of the card deck (why? not for blackjack 
+9:05 AM Sun // back at it, having made kids breakfast. Could use another coffee. Working on game logic/flow. 
+I know I'm doing this the laborious way with too many if statements. If I can make this function, I think 
+I can consolidate the code.
+
+
+ - Need to keep a running count of the card deck (why? not for blackjack, just restock deck after new game?)
  - Want to put a random "waitress shows up w a drink!"
- - Should game end on 21 by player? 
+ - Should game end on 21 by player? (0905 -- yes) 
