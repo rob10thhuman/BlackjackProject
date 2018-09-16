@@ -26,6 +26,8 @@ issues popping up like keeping a good run count
 I know I'm doing this the laborious way with too many if statements. If I can make this function, I think 
 I can consolidate the code.
 
+10:43 AM Sun // have to spend some time with my family, have some more functionality working 
+
 
  - Need to keep a running count of the card deck (why? not for blackjack, just restock deck after new game?)
  - Want to put a random "waitress shows up w a drink!"
