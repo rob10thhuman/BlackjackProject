@@ -149,10 +149,10 @@ public class BlackJackApp {
 				System.out.println("");
 				System.out.println("Dealer hits. ");
 				System.out.println(""); 
-				for (int i = 1; i < Dealer.dealerHand.size(); i++) {
-				System.out.println(Dealer.dealerHand.get(i).getRank());  
-			}
-				System.out.println("Dealer is showing ");
+//				for (int i = 1; i < Dealer.dealerHand.size(); i++) {
+//				System.out.println(Dealer.dealerHand.get(i).getRank());  
+//			}
+//				System.out.println("Dealer is showing ");
 			}
 
 			if (playerStay == true && Dealer.dealerScore() > 17) {
