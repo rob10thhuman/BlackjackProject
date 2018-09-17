@@ -37,6 +37,11 @@ learned in this one, from instaniating hands / arrayLists to retrieving the valu
 
 11:10 PM Sun // can't stop, few more tweaks, cleaned up the code
 
+11:34 PM Sun // added a condition to allow a second hit, working on showing the dealers hit cards after the first
+
+11:41 PM Sun // ok, calling it. One problem I am aware of: I can't seem to hit more than once but I have to turn in to be 
+able to be functional tomorrow 
+
  - Need to keep a running count of the card deck (why? not for blackjack, just restock deck after new game?)
  - Want to put a random "waitress shows up w a drink!"
  - Should game end on 21 by player? (0905 -- yes) 

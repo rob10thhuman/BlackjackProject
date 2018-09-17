@@ -71,6 +71,8 @@ public class BlackJackApp {
 //		*************** This is where the game play begins 
 
 //		int playerScore = Player.playerHand.get(0).getRank().getValue() + Player.playerHand.get(1).getRank().getValue();
+		// I am so proud of this code because it was me figuring out how to get to those values 
+		// I can't delete it. 
 		int playerScore = Player.playerScore();
 //		int dealerScore = Dealer.dealerHand.get(0).getRank().getValue() + Dealer.dealerHand.get(1).getRank().getValue();
 		int dealerScore = Dealer.dealerScore();
@@ -79,8 +81,6 @@ public class BlackJackApp {
 		System.out.println("");
 
 		System.out.println("Dealer has a showing value of " + Dealer.dealerHand.get(1).getRank().getValue());
-
-		// need to describe the gamepleay here
 
 		boolean dealerStay = false;
 		boolean playerStay = false;
@@ -99,6 +99,7 @@ public class BlackJackApp {
 				System.out.println("");
 				if (Player.playerScore() == 21 && Dealer.dealerScore() < 21) {
 					System.out.println("You win!");
+					System.out.println("Dealer's hand value was " + Dealer.dealerScore());
 					playAgain();
 				}
 			}
@@ -106,6 +107,8 @@ public class BlackJackApp {
 			if (Player.playerScore() > 21) {
 				System.out.println("");
 				System.out.println("Player busts w/a hand value of " + Player.playerScore());
+				System.out.println("");
+				System.out.println("Dealer's hand had a value of " + Dealer.dealerScore());
 				playAgain();
 			}
 
@@ -119,22 +122,48 @@ public class BlackJackApp {
 				System.out.println("");
 				System.out.println("Dealer hits. ");
 				System.out.println("");
-
 			}
+
+			//added the condition below to try to account for a second chance to hit
+//			if (Player.playerScore() < 21) {
+//				System.out.println("\nWould you like to Hit(H) or Stay(S)? ");
+//				String userChoice2 = kb.next();
+//
+//				if (userChoice2.equalsIgnoreCase("h")) {
+//					Player.add(deck.dealCard());
+//					System.out.println("Player hand is " + Player.playerHand);
+//					System.out.println("");
+//					System.out.println("Player hand value is " + Player.playerScore());
+//					System.out.println("");
+//					if (Player.playerScore() == 21 && Dealer.dealerScore() < 21) {
+//						System.out.println("You win!");
+//						System.out.println("Dealer's hand was " + Dealer.dealerHand);
+//						System.out.println("Dealer's hand value was " + Dealer.dealerScore());
+//						playAgain();
+//					}
+//				}
+//			}
+			
 			if (playerStay == true && Dealer.dealerScore() <= 17) {
 				Dealer.add(deck.dealCard());
 				System.out.println("");
 				System.out.println("Dealer hits. ");
-				System.out.println("");
+				System.out.println(""); 
+				for (int i = 1; i < Dealer.dealerHand.size(); i++) {
+				System.out.println(Dealer.dealerHand.get(i).getRank());  
+			}
+				System.out.println("Dealer is showing ");
 			}
 
 			if (playerStay == true && Dealer.dealerScore() > 17) {
 				System.out.println("Dealer stays. ");
+				System.out.println("");
 				dealerStay = true;
 			}
 
 			if (Dealer.dealerScore() > 21) {
-				System.out.println("Dealer busts. You win!");
+				System.out.println("Dealer busts w/a hand value of " + Dealer.dealerScore() + ". You win!");
+				System.out.println("Dealer hand was " + Dealer.dealerHand);
 				playAgain();
 			}
 			if (Player.playerScore() == Dealer.dealerScore()) {
