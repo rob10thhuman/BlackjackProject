@@ -30,6 +30,7 @@ I can consolidate the code.
 
 3:54 PM Sun // I believe I have the scoring done correctly, working on flow right now 
 
+8:51 PM Sun // moved from a series of if statements to a boolean while loop. Not quite working but much simpler code...if I can make it work
 
  - Need to keep a running count of the card deck (why? not for blackjack, just restock deck after new game?)
  - Want to put a random "waitress shows up w a drink!"
