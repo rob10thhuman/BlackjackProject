@@ -35,6 +35,8 @@ I can consolidate the code.
 11:04 PM Sun // it's not perfect but I think I've taken it as far as I can w/out a rested set of eyes on it. Lots of lessons 
 learned in this one, from instaniating hands / arrayLists to retrieving the values and comparing the same
 
+11:10 PM Sun // can't stop, few more tweaks, cleaned up the code
+
  - Need to keep a running count of the card deck (why? not for blackjack, just restock deck after new game?)
  - Want to put a random "waitress shows up w a drink!"
  - Should game end on 21 by player? (0905 -- yes) 

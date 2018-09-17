@@ -97,10 +97,10 @@ public class BlackJackApp {
 				System.out.println("");
 				System.out.println("Player hand value is " + Player.playerScore());
 				System.out.println("");
-					if (Player.playerScore() == 21 && Dealer.dealerScore() < 21) { 
-						System.out.println("You win!");
-						playAgain(); 
-					}
+				if (Player.playerScore() == 21 && Dealer.dealerScore() < 21) {
+					System.out.println("You win!");
+					playAgain();
+				}
 			}
 
 			if (Player.playerScore() > 21) {
@@ -111,6 +111,7 @@ public class BlackJackApp {
 
 			if (userChoice.equalsIgnoreCase("s")) {
 				playerStay = true;
+				System.out.println("Player hand value is " + Player.playerScore());
 			}
 
 			if (Dealer.dealerScore() < 17) {
@@ -144,221 +145,14 @@ public class BlackJackApp {
 			if (!playerStay && !dealerStay) {
 				if (Player.playerScore() > Dealer.dealerScore()) {
 					System.out.println("Player wins w/a hand value of " + Player.playerScore());
-					playAgain(); 
+					playAgain();
 				} else {
 					System.out.println("Dealer wins w/a hand value of " + Dealer.dealerScore());
-					playAgain(); 
+					playAgain();
 				}
 			}
 		}
 	}
-
-//		boolean playerStand = false;
-//		boolean dealerStand = false;
-//		String answer;
-//
-//		while (!playerStand || !dealerStand) {
-//			if (!playerStand) {
-//				System.out.println("Player, do you want to hit (H) or stand (S)? >>");
-//				String answer1 = kb.next();
-//				System.out.println("");
-//
-////				if (answer1.compareToIgnoreCase("H") == 0) {
-//				if (answer1.equals("H") || answer1.equals("h")) {
-////					playerStand = !Player.playerHand.add(deck.dealCard());
-//					Player.playerHand.add(deck.dealCard());
-//					System.out.println("");
-//					System.out.println("Player hand is " + Player.playerHand);
-//					System.out.println("Player hand value is " + Player.playerScore());
-//					System.out.println("");
-//						if (Player.playerScore() > 21 || Dealer.dealerScore() < 21) {
-//							System.out.println("");
-//							System.out.println("Player busts! Dealer wins! ");
-//							playAgain();
-//						}
-//				} else {
-//					playerStand = true;
-//				}
-//			}
-//			if (!dealerStand) {
-//				if (Dealer.dealerScore() < 17) {
-//					System.out.println("");
-//					System.out.println("Dealer hits! ");
-//					System.out.println("");
-//					dealerStand = !Dealer.dealerHand.add(deck.dealCard());
-////					Dealer.dealerHand.add(deck.dealCard());
-//					System.out.println("");
-//					System.out.println("Dealer hand is " + Dealer.dealerHand);
-//					System.out.println("");
-//				} else {
-//					System.out.println("");
-//					System.out.println("Dealer stays. ");
-//					System.out.println("Dealer hand is " + Dealer.dealerHand);
-//					System.out.println("");
-//					dealerStand = true;
-//				}
-//			}
-//		}
-//		
-//		int x = Player.playerScore();
-//		int y = Dealer.dealerScore();
-//		
-//		if (x > y && x <=21 || y > 21) {
-//			System.out.println("You win!");
-//		} else {
-//			System.out.println("Dealer wins!");
-//			playAgain(); 
-//		}
-
-//		if (playerScore == 21 && dealerScore == 21) {
-//			System.out.println("Both player and dealer have 21! (What are the odds!");
-//			System.out.println("Game is a push!");
-//
-//			playAgain();
-//		}
-//
-//		if (playerScore == 21) {
-//			System.out.println("Player has 21! You win!");
-//			playAgain();
-//		}
-//
-//		if (dealerScore == 21) {
-//			System.out.println("Dealer has 21! You lose!");
-//			playAgain();
-//		}
-//
-//		System.out.println("");
-
-//		while (playerScore != 21 && dealerScore != 21) {
-
-//		System.out.println("Neither player has 21.");
-//
-//		System.out.println("");
-//
-//		System.out.println("Player, do you want to hit (H) or stand (S)? >>");
-//		String action = kb.next();
-//
-//		if ((action.equals("h") || action.equals("H"))) {
-//
-//			Player.add(deck.dealCard());
-//
-//			System.out.println("Player is dealt a " + Player.playerHand.get(2));
-//
-//			System.out.println("");
-//
-//			System.out.println("Player has " + Player.playerHand.size() + " cards.");
-//
-//			Deck.pressEnter();
-//
-//			System.out.println("");
-//			System.out.println("Player has a hand value of " + Player.playerScore());
-//			System.out.println("");
-//
-//			if (playerScore == 21 && dealerScore == 21) {
-//				System.out.println("Both player and dealer have 21! (What are the odds!");
-//				System.out.println("Game is a push!");
-//
-//				playAgain();
-//			}
-//
-//			if (playerScore == 21) {
-//				System.out.println("Player has 21! You win!");
-//				playAgain();
-//			}
-//
-//			if (dealerScore == 21) {
-//				System.out.println("Dealer has 21! You lose!");
-//				playAgain();
-//			}
-//
-//			if (playerScore > 21) {
-//				System.out.println("Player busts :( ");
-//				playAgain();
-//			}
-//		}
-//
-//		if (dealerScore > 17) {
-//			Dealer.add(deck.dealCard());
-//
-//			System.out.println("Dealer has a hand value of " + dealerScore);
-//			System.out.println("");
-//
-//			if (dealerScore == 21) {
-//				System.out.println("Dealer wins!");
-//				playAgain();
-//			}
-//			if (dealerScore > 21) {
-//				System.out.println("Dealer busts! Player wins!");
-//				playAgain();
-//			}
-//		} else {
-//			System.out.println("Dealer stands! ");
-//		}
-//
-//		System.out.println("Player, do you want to hit (H) or stand (S)? >>");
-//		String action2 = kb.next();
-//
-//		if ((action2.equals("h") || action2.equals("H"))) {
-//
-//			Player.add(deck.dealCard());
-//
-//			System.out.println("Player is dealt a " + Player.playerHand.get(2));
-//
-//			Deck.pressEnter();
-//
-//			System.out.println("Player has a hand value of " + playerScore);
-//			System.out.println("");
-//
-//			if (playerScore == 21 && dealerScore == 21) {
-//				System.out.println("Both player and dealer have 21! (What are the odds!");
-//				System.out.println("Game is a push!");
-//
-//				playAgain();
-//			}
-//
-//			if (playerScore == 21) {
-//				System.out.println("Player has 21! You win!");
-//				playAgain();
-//			}
-//
-//			if (dealerScore == 21) {
-//				System.out.println("Dealer has 21! You lose!");
-//				playAgain();
-//			}
-//
-//			if (playerScore > 21) {
-//				System.out.println("Player busts :( ");
-//				playAgain();
-//			}
-//		}
-//
-//		if (dealerScore < 17) {
-//
-//			System.out.println("Dealer hits!");
-//			System.out.println("");
-//
-//			Dealer.add(deck.dealCard());
-//
-//			System.out.println("");
-//
-//			if (dealerScore == 21) {
-//				System.out.println("Dealer wins!");
-//				playAgain();
-//			}
-//			if (dealerScore > 21) {
-//				System.out.println("Dealer busts! Player wins!");
-//				playAgain();
-//			}
-//			if (action2.equals("s") || action2.equals("S") && dealerScore > 17) {
-	// scenario here for evaluating the hands and declaring a winner if both are
-	// standing
-//			}
-//		} else {
-//			System.out.println("Dealer stands! ");
-//		}
-//	}
-
-//	}
 
 	public void playAgain() {
 		Scanner kb2 = new Scanner(System.in);
@@ -366,8 +160,8 @@ public class BlackJackApp {
 		System.out.println("Do you want to play again? Y/N >> ");
 		String choice = kb2.next();
 		if ((choice.equals("Y") || choice.equals("y"))) {
-			Player.playerHand = null;
-			Dealer.dealerHand = null;
+			Player.playerHand.clear();
+			Dealer.dealerHand.clear();
 			run();
 		} else {
 			System.out.println("Goodbye!");
