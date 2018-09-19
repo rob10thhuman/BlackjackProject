@@ -4,20 +4,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
+	private List<Card> playerHand;
 
-	public static List<Card> playerHand = new ArrayList<>();
+	public Player() {
+		playerHand = new ArrayList<>(); 
+	}
+	
 
-	public static void add(Card dealCard) {
+	public void add(Card dealCard) {
 		playerHand.add(dealCard);
 	}
 
-	public static int playerScore(){
-		int playerScore = 0; 
-		
+	public int playerScore() {
+		int playerScore = 0;
+
 		for (int i = 0; i < playerHand.size(); i++) {
-		playerScore += Player.playerHand.get(i).getRank().getValue();  
+			playerScore += playerHand.get(i).getRank().getValue();
+		}
+		return playerScore;
 	}
-		return playerScore; 
-}
+
+	public List<Card> getPlayerHand() {
+		return playerHand;
+	}
+
+	public void setPlayerHand(List<Card> playerHand) {
+		this.playerHand = playerHand;
+	}
 
 }
