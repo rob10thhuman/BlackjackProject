@@ -42,6 +42,4 @@ learned in this one, from instaniating hands / arrayLists to retrieving the valu
 11:41 PM Sun // ok, calling it. One problem I am aware of: I can't seem to hit more than once but I have to turn in to be 
 able to be functional tomorrow 
 
- - Need to keep a running count of the card deck (why? not for blackjack, just restock deck after new game?)
- - Want to put a random "waitress shows up w a drink!"
- - Should game end on 21 by player? (0905 -- yes) 
+5:34 PM Wednesday // a number of lessons learned in this project, from framing failures to logic flow! 
